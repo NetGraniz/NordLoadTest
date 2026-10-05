@@ -1,0 +1,26 @@
+{
+  "name": "nord-load-test",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Headless Minecraft 26.2 load generator for Nord-Fjell staging tests",
+  "type": "commonjs",
+  "scripts": {
+    "start": "node --max-old-space-size=8192 src/index.js",
+    "check": "npm run prepare-data && node --check src/index.js && node src/index.js --validate && node --test",
+    "prepare-data": "node node_modules/mineflayer/tools/install-minecraft-data-26.2.mjs",
+    "test": "node --test"
+  },
+  "engines": {
+    "node": ">=22"
+  },
+  "dependencies": {
+    "minecraft-data": "3.113.0",
+    "mineflayer": "https://codeload.github.com/zkonikishi/Mineflayer/tar.gz/f9e7db4447afda7838f08aa13430ec768738c178",
+    "vec3": "^0.1.10"
+  },
+  "overrides": {
+    "minecraft-protocol": "https://codeload.github.com/PrismarineJS/node-minecraft-protocol/tar.gz/0dfb5768b444fd21e45135713edb2ed80279f696",
+    "prismarine-chunk": "https://codeload.github.com/robertvandervoort/prismarine-chunk/tar.gz/bcf228b3be07f5105c170ab25f2b4ee723718230",
+    "prismarine-physics": "https://codeload.github.com/robertvandervoort/prismarine-physics/tar.gz/e5597f73f4aa76a621a18b8f14708cc8b6dd33a4"
+  }
+}

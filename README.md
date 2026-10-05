@@ -1,5 +1,8 @@
 # NordLoadTest
 
+> Release build and installation requirements: see [BUILDING.md](BUILDING.md).
+> Older local paths below describe historical test fixtures, not the release build.
+
 External headless load generator for the Nord-Fjell Minecraft 26.2 stack. It connects through Velocity, waits in NordQueue, registers or logs in through NordAuth, then keeps the bots moving and makes them mine and replace nearby safe blocks.
 
 The program has no duration limit. It reconnects bots after proxy or server restarts and runs until the operator presses `Ctrl+C` in its console.

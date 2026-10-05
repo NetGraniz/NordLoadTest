@@ -1,6 +1,6 @@
 {
   "name": "nord-load-test",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "private": true,
   "description": "Headless Minecraft 26.2 load generator for Nord-Fjell staging tests",
   "type": "commonjs",
